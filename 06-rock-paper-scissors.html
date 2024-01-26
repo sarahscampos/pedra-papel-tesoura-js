@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, papel e tesoura</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <p class="title">Pedra, papel e tesoura</p>
+    <button onclick="
+        playGame('pedra');
+    " class="move-button">
+        <img src="imagens/pedra-emoji.png" alt="emoji de pedra" class="move-icon">
+    </button>
+
+    <button onclick="
+        playGame('papel');
+    " class="move-button">
+        <img src="imagens/papel-emoji.png" alt="emoji de papel" class="move-icon">
+    </button>
+
+    <button onclick="
+        playGame('tesoura');
+    " class="move-button">
+        <img src="imagens/tesoura-emoji.png" alt="emoji de tesoura" class="move-icon">
+    </button>
+
+    <p class="js-result result"></p>
+
+    <p class="js-moves"></p>
+
+    <p class="js-score score"></p>
+    
+    <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;  
+        localStorage.removeItem('score');
+        updateScoreElement();
+    " class="reset-score-button">Resetar Pontuação</button>
+
+    <script src="scripts/pedra-papel-tesoura.js"></script>
+</body>
+</html>
